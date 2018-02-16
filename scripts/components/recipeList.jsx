@@ -8,8 +8,6 @@ import RecipeComponent from "./recipeComponent.jsx";
 export default class RecipeList extends React.Component {
     constructor(props) {
         super(props);
-
-        console.log(this.props);
     }
 
     renderCards() {
