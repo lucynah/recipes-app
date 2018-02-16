@@ -14,7 +14,7 @@ export default class RecipeList extends React.Component {
 
     renderCards() {
         return this.props.listData.map((recipe, index) => {
-            return <RecipeCard key={index} recipe={recipe} onClick={this.props.onElementClick}/>
+            return <RecipeCard key={index} recipe={recipe} onClick={this.props.onElementClick} />
         });
     }
 

@@ -17,10 +17,11 @@ export default class RecipeCard extends React.Component {
             background: `url(${this.props.recipe.imgUrl}) no-repeat center center`,
             backgroundSize: "cover"
         }
-        if(this.props.recipe.active){
+        if (this.props.recipe.active) {
             recipeCardStyle.color = "red";
+
         }
-        
+
         return (
             <div style={recipeCardStyle} onClick={this.onClickHandler}>{this.props.recipe.title}</div>
         )

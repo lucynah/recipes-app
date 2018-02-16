@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import PropTypes, { element } from "prop-types";
 
 import RecipeList from "./recipeList.jsx";
+import RecipeComponent from "./recipeComponent.jsx";
 
 export default class App extends React.Component {
     constructor(props) {
@@ -42,9 +43,9 @@ export default class App extends React.Component {
 
     activateRecipe(recipe) {
         console.log(recipe);
-    
+
         const clickedRecipeIndex = this.state.recipeList.indexOf(recipe);
-        
+
         const newRecipeList = this.state.recipeList.map(el => {
             return Object.assign({}, el);
         });
@@ -59,9 +60,9 @@ export default class App extends React.Component {
             activeRecipe: recipe,
             recipeList: newRecipeList
         });
-         
+
     }
-    
+
     render() {
         return (
             <div>
@@ -73,8 +74,7 @@ export default class App extends React.Component {
 
     renderRecipeDetails() {
         if (this.state.activeRecipe) {
-            return <p>{this.state.activeRecipe.text}</p>
-
+            return <RecipeComponent recipe={this.state.activeRecipe} />
         }
     }
 }
